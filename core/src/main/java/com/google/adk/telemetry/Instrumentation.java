@@ -203,7 +203,13 @@ public final class Instrumentation {
     }
   }
 
-  /** Creates an AgentInvocation context to record agent invocation telemetry. */
+  /**
+   * Creates an AgentInvocation context to record agent invocation telemetry.
+   *
+   * @deprecated Use the version with explicit parent context instead. This method will be removed
+   *     once all callers are updated.
+   */
+  @Deprecated // Use the version with explicit parent context instead.
   public static AgentInvocation recordAgentInvocation(InvocationContext ctx, BaseAgent agent) {
     return recordAgentInvocation(ctx, agent, Context.current());
   }

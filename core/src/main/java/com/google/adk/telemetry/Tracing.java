@@ -477,6 +477,7 @@ public class Tracing {
    * @param <T> The type of the stream.
    * @return A TracerProvider configured for agent invocation.
    */
+  @Deprecated // Use trace() instead and configure the span manually.
   public static <T> TracerProvider<T> traceAgent(
       String spanName,
       String agentName,
